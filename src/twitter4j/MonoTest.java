@@ -44,6 +44,7 @@ public class MonoTest {
   static Twitter twitter=null;
 static DBCollection collection=null;
     private static DBCollection Usercollection;
+    private static DBCollection SearchCollection;
 
 static void threadMessage(String message) {
         String threadName =Thread.currentThread().getName();
@@ -76,7 +77,7 @@ public static void  getTweetByQuery(boolean loadRecords, String keyword, String 
 
                 threadMessage("Starting MessageLoop thread");
                 long startTime = System.currentTimeMillis();                
-                Thread t = new Thread(new MonoThread(collection,twitter, Usercollection,userName,password));
+                Thread t = new Thread(new MonoThread(collection,twitter, Usercollection,userName,password,SearchCollection));
                 t.start();                  
                 threadMessage("Waiting for MessageLoop thread to finish");
                 // loop until MessageLoop           // thread exits
@@ -208,9 +209,11 @@ public static void  getTweetByQuery(boolean loadRecords, String keyword, String 
     // if collection doesn't exists, mongodb will create it for you
     System.out.println(userName+"\t"+mypass);
 
-    collection = db.getCollection("twitter_Stream");
+    collection = db.getCollection("twitter_Stream_fuji");
     
     Usercollection = db.getCollection("user_tw_Stream");
+    SearchCollection = db.getCollection("search_tw_fb_fuji");
+    
     getTweetByQuery(true,"bus",userName,mypass);
     
     System.exit(0);

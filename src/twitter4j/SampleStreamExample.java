@@ -137,14 +137,14 @@ public class SampleStreamExample {
           */
           
            
-    
-//        Status status1 = twitter.showStatus(Long.parseLong("596549919961415680"));//598047680942592001
-  //      if (status1 == null) { // 
+    //https://twitter.com/AtYourServicecy/status/695662311764176896
+        Status status1 = twitter.showStatus(Long.parseLong("695662311764176896"));//598047680942592001
+        if (status1 != null) { // 
     //        // don't know if needed - T4J docs are very bad            
      //   } else {
-       //     System.out.println("@" + status1.getUser().getScreenName()+":"+status1.getRetweetCount()
-         //               + " - " + status1.getText());
-        //}          
+            System.out.println("@" + status1.getUser().getScreenName()+":"+status1.getRetweetCount()
+                        + " - " + status1.getText());
+        }          
           //
           //I should tell one of my friends, she always talking with mobile than half hr
         //Why is everyone ranking the iPhone 1 as the best? Respond on Medium with your ranking

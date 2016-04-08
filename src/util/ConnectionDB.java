@@ -52,9 +52,10 @@ public class ConnectionDB {
     }
         
     
-    public void closeMySqlConnect(){
+    public static void closeMySqlConnect(){
         try{            
             mysqlconn.close();            
+            mysqlconn=null;
         }
         catch(SQLException ex){
             ex.printStackTrace();

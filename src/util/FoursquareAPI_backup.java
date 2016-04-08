@@ -39,7 +39,7 @@ import org.scribe.oauth.OAuthService;
  *
  * @author uqgzhu1
  */
-public class FoursquareAPI {
+public class FoursquareAPI_backup{
     private YelpAPI yelpApi = null;
     private static final String API_HOST = "api.foursquare.com";
   //private static final String DEFAULT_TERM = "dinner";
@@ -62,7 +62,7 @@ public class FoursquareAPI {
     //https://api.foursquare.com/v2/venues/search?client_id=SV5TE3OAE5CSFSPV4BH520SW2RPXCK24CARNTRTSCBEBMKGQ&client_secret=DNUHTOBW3XJGSLKRNH51GDUUJZCBWRB515X15QJGKHXHVBXK&v=20130815&ll=-36.4575,148.262222
 
     
-    public FoursquareAPI(String user_name, String mypassword) {
+    public FoursquareAPI_backup(String user_name, String mypassword) {
 //              yelpApi = new YelpAPI();
 //    this.accessToken = new Token(TOKEN, TOKEN_SECRET);
         try {
@@ -395,7 +395,7 @@ public class FoursquareAPI {
   //  YelpAPICLI yelpApiCli = new YelpAPICLI();
         //new JCommander(yelpApiCli, args);
 
-        FoursquareAPI yelpApi = new FoursquareAPI(null,null);
+        FoursquareAPI_backup yelpApi = new FoursquareAPI_backup(null,null);
       //String searchResponseJSON = yelpApi.search("city", -27.56, 152.34);
         //String searchResponseJSON1 = yelpApi.search("city", -28.636765,153.637283);//-27.497835,153.017472);
         //String searchResponseJSON = yelpApi.search("city", -27.497835,153.017472);//);      
